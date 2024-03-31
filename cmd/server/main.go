@@ -1,7 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"github.com/wagaodev/Go-Expert-API/configs"
+)
 
 func main() {
-	fmt.Println("Hello World")
+	config, _ := configs.Init(".")
+	println(config.DBDriver)
 }
