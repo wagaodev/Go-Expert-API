@@ -22,4 +22,5 @@ func TestUser_ValidatePassword(t *testing.T) {
 	assert.Nil(t, err)
 	assert.True(t, user.ValidatePassword("123456"))
 	assert.False(t, user.ValidatePassword("12345t67"))
+	assert.NotEqual(t, "123456", user.Password)
 }
